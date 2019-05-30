@@ -1,0 +1,5 @@
+*.o
+lspci-ng
+dmidecode-3-2
+dmidecode-3-2.tar.gz
+pciutils
