@@ -13,9 +13,7 @@
 	}, 6
 },
 
-#if 0
-
-{foo, bar, test, moo, "MSI", "B250 KRAIT GAMING (MS-7A68)", /* DMIDecode has some of the busaddresses wrong, and non-informative labels */
+{0x8086, 0x590f, 0x1462, 0x7a68, "MSI", "B250 KRAIT GAMING (MS-7A68)", /* DMIDecode has some of the busaddresses wrong, and non-informative labels */
 	{
 		{0x00, 0x01, 0x0, "PCI slot 1"},
 		{0x00, 0x1c, 0x6, "PCI slot 2/3"},  /* shares the BUS, only use of them at a time */
@@ -24,6 +22,7 @@
 	}, 4
 },
 
+#if 0
 {foo, bar, test, moo, "ASUSTeK Computer INC.", "M4A785-M", /* SMBIOS version 2.5, does not contain busaddresses */
 	{
 		{0x00, 0x09, 0x0, "PCIE1X"},
