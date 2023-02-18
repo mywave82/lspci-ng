@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
 				lspci_rootbus?lspci_rootbus->vendor:0,
 				lspci_rootbus?lspci_rootbus->device:0,
 				lspci_rootbus?lspci_rootbus->subsystem_vendor:0,
-				lspci_rootbus?lspci_rootbus->subsystem_vendor:0,
+				lspci_rootbus?lspci_rootbus->subsystem_device:0,
 				board_vendor,
 				board_name);
 			printf ("\t{\n");
