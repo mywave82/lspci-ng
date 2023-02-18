@@ -22,6 +22,15 @@
 	}, 4
 },
 
+{0x8086, 0x3ec2, 0x1043, 0x8694, "ASUSTeK COMPUTER INC.", "PRIME H310M-D", /* partially repaired. All data reported from BIOS is incorrect */
+	{
+		{0x00, 0x01, 0x00, "PCIEX16"},  // BIOS report 01.01.00, correct is 00.01.0
+		{0x00, 0x1c, 0x00, "PCIEX1_1"}, // BIOS report 02.1c.03, correct is 00.1c.0
+		// {0x00, 0x1c, 0x07, "INTEGRATED"}, // Not reported by BIOS and it is internal, but it is mapped via PCI root hub
+		{0xff, 0x1c, 0x04, "PCIEX1_2"}  // Probably M.2 port, not tested/corrected
+	},3
+}
+
 #if 0
 {foo, bar, test, moo, "ASUSTeK Computer INC.", "M4A785-M", /* SMBIOS version 2.5, does not contain busaddresses */
 	{
