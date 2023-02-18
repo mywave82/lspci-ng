@@ -533,19 +533,20 @@ static void decode_lspci(void)
 				temp += 9;
 				while (temp != next)
 				{
-					if (!strncmp(temp, "Width x1,", 9))
+
+					if ((!strncmp(temp, "Width x1,", 9)) || (!strncmp(temp, "Width x1\n", 9)))
 					{
 						max_width = 1;
-					} else if (!strncmp(temp, "Width x2,", 9))
+					} else if ((!strncmp(temp, "Width x2,", 9)) || (!strncmp(temp, "Width x2\n", 9)))
 					{
 						max_width = 2;
-					} else if (!strncmp(temp, "Width x4,", 9))
+					} else if ((!strncmp(temp, "Width x4,", 9)) || (!strncmp(temp, "Width x4\n", 9)))
 					{
 						max_width = 4;
-					} else if (!strncmp(temp, "Width x8,", 9))
+					} else if ((!strncmp(temp, "Width x8,", 9)) || (!strncmp(temp, "Width x8\n", 9)))
 					{
 						max_width = 8;
-					} else if (!strncmp(temp, "Width x16,", 10))
+					} else if ((!strncmp(temp, "Width x16,", 10)) || (!strncmp(temp, "Width x16\n", 10)))
 					{
 						max_width = 16;
 					} else if (!strncmp(temp, "Speed 2.5GT/s", 13))
@@ -568,19 +569,19 @@ static void decode_lspci(void)
 				temp += 9;
 				while (temp != next)
 				{
-					if (!strncmp(temp, "Width x1,", 9))
+					if ((!strncmp(temp, "Width x1,", 9)) || (!strncmp(temp, "Width x1\n", 9)))
 					{
 						active_width = 1;
-					} else if (!strncmp(temp, "Width x2,", 9))
+					} else if ((!strncmp(temp, "Width x2,", 9)) || (!strncmp(temp, "Width x2\n", 9)))
 					{
 						active_width = 2;
-					} else if (!strncmp(temp, "Width x4,", 9))
+					} else if ((!strncmp(temp, "Width x4,", 9)) || (!strncmp(temp, "Width x4\n", 9)))
 					{
 						active_width = 4;
-					} else if (!strncmp(temp, "Width x8,", 9))
+					} else if ((!strncmp(temp, "Width x8,", 9)) || (!strncmp(temp, "Width x8\n", 9)))
 					{
 						active_width = 8;
-					} else if (!strncmp(temp, "Width x16,", 10))
+					} else if ((!strncmp(temp, "Width x16,", 10)) || (!strncmp(temp, "Width x16\n", 10)))
 					{
 						active_width = 16;
 					} else if (!strncmp(temp, "Speed 2.5GT/s", 13))
